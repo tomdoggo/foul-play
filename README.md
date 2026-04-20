@@ -43,6 +43,10 @@ python run.py \
 --pokemon-format gen9randombattle
 ```
 
+```bash
+python run.py --websocket-uri wss://sim3.psim.us/showdown/websocket --ps-username 'tomdog9527' --ps-password nocturne1997 --bot-mode search_ladder --pokemon-format gen9randombattle
+```
+
 ### Running with Docker
 
 **1. Clone the repository**

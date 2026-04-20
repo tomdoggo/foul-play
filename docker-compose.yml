@@ -1,0 +1,21 @@
+services:
+  foul-play:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: foul-play:local
+    container_name: foul-play
+    restart: "no"
+    stdin_open: true
+    tty: true
+    environment:
+      PYTHONIOENCODING: utf-8
+    command:
+      - --websocket-uri=wss://sim3.psim.us/showdown/websocket
+      - --ps-username=${PS_USERNAME}
+      - --ps-password=${PS_PASSWORD}
+      - --bot-mode=search_ladder
+      - --pokemon-format=gen9randombattle
+      - --search-time-ms=2000
+      - --search-parallelism=2
+      - --run-count=5
